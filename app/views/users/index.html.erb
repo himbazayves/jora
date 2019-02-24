@@ -37,10 +37,16 @@
 
 
       body {
-background: black;
+
 
       }
+.login-box 
+   { width: 280px;
+   position: absolute;
 
+
+
+}
 
     </style>
     <!-- Custom styles for this template -->
@@ -102,46 +108,7 @@ background: black;
 
  
 
-  <%= form_tag sessions_path do %>
-    <table>
-    <tr>
-    <td>
-    <%= label_tag :email %>
-
-    </td>
-    <td>
-    <%= email_field_tag :email %>
-    
-  </td>
-  </tr>
-    
-  <tr>
-  <td>
-    <%= label_tag :password %>
-
-    </td>
-    <td>
-    <%= password_field_tag :password %>
-    </td>
-  </tr>
-  <tr>
-  <td>
   
-  </td>
-  <td>
-    <button type="button" class="btn btn-secondary">   <%=link_to 'sign up', {:action =>'signup'} %>  </button>
-    <button type="button" class="btn btn-secondary">   <%= submit_tag "Sign in" %>  </button>
-    </td>
-    <tr>
-    </table>
-    <% end %>
-
-  
-  
-
-
-
-
 
 
   
@@ -151,9 +118,47 @@ background: black;
  
   
   <div class="col-sm-12 col-lg">
+ <div class="login-box"
+  <form>
+  <%= form_tag sessions_path do %>
+    <div class="form-group">
+   
+    <label for="exampleInputEmail1">Email address</label>
 
+    <div class="form-control" >
+    <%= email_field_tag :email %>
 
+    </div>
+    </div>
+    
   
+  <div class="form-group">
+  
+  <label for="exampleInputEmail1">Email address</label>
+
+
+  <div class="form-control" >
+   
+    <%= password_field_tag :password %>
+   </div> 
+    
+</div>
+    
+    
+    
+    <button type="button" class="btn btn-secondary">   <%=link_to 'sign up', {:action =>'signup'} %>  </button>
+    <button type="button" class="btn btn-secondary">   <%= submit_tag "Sign in" %>  </button>
+    
+    <% end %>
+
+  </form>
+
+  </div>
+  
+
+
+
+
   
   </div>
 
@@ -162,7 +167,17 @@ background: black;
   
   
   
+  <div class="col-sm-12 col-lg">
 
+  
+
+ 
+
+  
+
+
+  
+  </div>
  
 
 
